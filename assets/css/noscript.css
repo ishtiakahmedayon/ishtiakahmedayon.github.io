@@ -1,21 +1,29 @@
 /*
-	Ethereal by HTML5 UP
+	Lens by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Page */
+/* Main */
 
-	body {
-		overflow-x: scroll;
+	#main {
+		opacity: 1 !important;
+		right: 0 !important;
 	}
 
-/* Wrapper */
-
-	body.is-preload #wrapper {
-		-moz-transform: none;
-		-webkit-transform: none;
-		-ms-transform: none;
-		transform: none;
-		opacity: 1;
+	body:before {
+		content: 'Javascript is disabled :(';
+		display: block;
+		position: absolute;
+		top: 50%;
+		width: calc(100% - 22.5em * 0.333333333);
+		height: 4em;
+		margin-top: -2em;
+		color: #282828;
+		cursor: default;
+		font-size: 3em;
+		line-height: 4em;
+		text-align: center;
+		white-space: nowrap;
+		left: 0;
 	}
