@@ -1,56 +1,75 @@
 /* ============================================================
    Ishtiak Ahmed Ayon — Portfolio
-   Theme: retro terminal / IDE dark mode, with light mode toggle
+   Theme: Interstellar — deep-space green-black terminal, retro
+   computer cards, with a consistent light mode toggle
    ============================================================ */
 
 * { box-sizing: border-box; }
 
 :root[data-theme="dark"] {
-  --bg: #0a0c10;
-  --bg-elevated: #0e1116;
-  --surface: #12151c;
-  --surface-hover: #171b23;
-  --border: #232833;
-  --border-soft: #1a1e27;
-  --text-primary: #e7eaf0;
-  --text-secondary: #98a1b0;
-  --text-dim: #565f6e;
-  --accent: #f2a53c;
-  --accent-dim: #8a611f;
-  --accent-soft: rgba(242, 165, 60, 0.12);
-  --accent-2: #6fcf7d;
-  --accent-2-soft: rgba(111, 207, 125, 0.12);
-  --maroon: #b5453f;
-  --maroon-soft: rgba(181, 69, 63, 0.14);
-  --shadow: rgba(0, 0, 0, 0.55);
+  --bg: #050806;
+  --bg-elevated: #081310;
+  --surface: #0b1712;
+  --surface-hover: #10221b;
+  --border: #1f3a2c;
+  --border-soft: #152720;
+  --text-primary: #f1f8f2;
+  --text-secondary: #b9c9bd;
+  --text-dim: #6c8579;
+  --accent: #f2c14e;
+  --accent-dim: #a3822f;
+  --accent-soft: rgba(242, 193, 78, 0.14);
+  --accent-2: #57e08a;
+  --accent-2-soft: rgba(87, 224, 138, 0.14);
+  --maroon: #d9615a;
+  --maroon-soft: rgba(217, 97, 90, 0.14);
+  --shadow: rgba(0, 0, 0, 0.6);
   --scanline-opacity: 0.035;
-  --code-red: #e5645f;
-  --code-yellow: #e6b450;
-  --code-green: #6fcf7d;
+  --code-red: #ef6b62;
+  --code-yellow: #ecc25c;
+  --code-green: #57e08a;
+
+  --section-bg: rgba(4, 7, 6, 0.62);
+  --section-bg-alt: rgba(6, 12, 9, 0.74);
+  --bezel-1: #0f1c16;
+  --bezel-2: #050a08;
+  --bezel-edge: #274a37;
+  --led: var(--accent-2);
+  --stars-opacity: 0.85;
+  --blackhole-opacity: 0.85;
 }
 
 :root[data-theme="light"] {
-  --bg: #efe9db;
-  --bg-elevated: #e6dfcd;
-  --surface: #fbf9f3;
-  --surface-hover: #f2ece0;
-  --border: #d7cdb2;
-  --border-soft: #e2d9c2;
-  --text-primary: #201c14;
-  --text-secondary: #5b5443;
-  --text-dim: #8a8168;
+  --bg: #eef1e6;
+  --bg-elevated: #e5ead9;
+  --surface: #fbfcf7;
+  --surface-hover: #f1f5e9;
+  --border: #cddac2;
+  --border-soft: #dee7d2;
+  --text-primary: #151f17;
+  --text-secondary: #48573f;
+  --text-dim: #7c8a71;
   --accent: #a5670c;
   --accent-dim: #cfa25a;
   --accent-soft: rgba(165, 103, 12, 0.12);
-  --accent-2: #2f7a41;
-  --accent-2-soft: rgba(47, 122, 65, 0.12);
+  --accent-2: #217a45;
+  --accent-2-soft: rgba(33, 122, 69, 0.12);
   --maroon: #8a332d;
   --maroon-soft: rgba(138, 51, 45, 0.1);
-  --shadow: rgba(60, 50, 30, 0.18);
+  --shadow: rgba(40, 50, 30, 0.18);
   --scanline-opacity: 0.02;
   --code-red: #c9463f;
   --code-yellow: #a5670c;
-  --code-green: #2f7a41;
+  --code-green: #217a45;
+
+  --section-bg: rgba(238, 241, 230, 0.88);
+  --section-bg-alt: rgba(229, 234, 217, 0.92);
+  --bezel-1: #f1ede0;
+  --bezel-2: #d9d2bc;
+  --bezel-edge: #c6ba98;
+  --led: var(--accent-2);
+  --stars-opacity: 0.12;
+  --blackhole-opacity: 0.08;
 }
 
 html { scroll-behavior: smooth; }
@@ -66,16 +85,90 @@ body {
   -webkit-font-smoothing: antialiased;
   transition: background .25s ease, color .25s ease;
   overflow-x: hidden;
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect x='7' y='0' width='2' height='1' fill='%23f2a53c'/%3E%3Crect x='6' y='1' width='4' height='1' fill='%23f2a53c'/%3E%3Crect x='6' y='2' width='4' height='1' fill='%23e7eaf0'/%3E%3Crect x='5' y='3' width='6' height='1' fill='%23e7eaf0'/%3E%3Crect x='5' y='4' width='2' height='1' fill='%23e7eaf0'/%3E%3Crect x='9' y='4' width='2' height='1' fill='%23e7eaf0'/%3E%3Crect x='6' y='4' width='3' height='1' fill='%236fcf7d'/%3E%3Crect x='5' y='5' width='6' height='2' fill='%23e7eaf0'/%3E%3Crect x='7' y='5' width='2' height='2' fill='%236fcf7d'/%3E%3Crect x='5' y='7' width='6' height='1' fill='%23e7eaf0'/%3E%3Crect x='4' y='8' width='2' height='2' fill='%23b5453f'/%3E%3Crect x='10' y='8' width='2' height='2' fill='%23b5453f'/%3E%3Crect x='6' y='8' width='4' height='2' fill='%23e7eaf0'/%3E%3Crect x='6' y='10' width='1' height='2' fill='%23e6b450'/%3E%3Crect x='7' y='10' width='2' height='3' fill='%23f2a53c'/%3E%3Crect x='9' y='10' width='1' height='2' fill='%23e6b450'/%3E%3C/svg%3E") 8 2, auto;
+  cursor: url("assets/images/cursor-endurance.svg") 16 16, auto;
 }
 
-::selection { background: var(--accent); color: #0a0c10; }
+::selection { background: var(--accent); color: #05080a; }
 
 a, button, .edu-card-clickable, .project-menu-item, .theme-toggle {
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect x='7' y='0' width='2' height='1' fill='%23f2a53c'/%3E%3Crect x='6' y='1' width='4' height='1' fill='%23f2a53c'/%3E%3Crect x='6' y='2' width='4' height='1' fill='%23ffffff'/%3E%3Crect x='5' y='3' width='6' height='1' fill='%23ffffff'/%3E%3Crect x='5' y='4' width='2' height='1' fill='%23ffffff'/%3E%3Crect x='9' y='4' width='2' height='1' fill='%23ffffff'/%3E%3Crect x='6' y='4' width='3' height='1' fill='%236fcf7d'/%3E%3Crect x='5' y='5' width='6' height='2' fill='%23ffffff'/%3E%3Crect x='7' y='5' width='2' height='2' fill='%236fcf7d'/%3E%3Crect x='5' y='7' width='6' height='1' fill='%23ffffff'/%3E%3Crect x='4' y='8' width='2' height='2' fill='%23f2a53c'/%3E%3Crect x='10' y='8' width='2' height='2' fill='%23f2a53c'/%3E%3Crect x='6' y='8' width='4' height='2' fill='%23ffffff'/%3E%3Crect x='6' y='10' width='1' height='2' fill='%23e6b450'/%3E%3Crect x='7' y='10' width='2' height='3' fill='%23f2a53c'/%3E%3Crect x='9' y='10' width='1' height='2' fill='%23e6b450'/%3E%3C/svg%3E") 8 2, pointer;
+  cursor: url("assets/images/cursor-endurance-pointer.svg") 16 16, pointer;
 }
 
 a { color: inherit; text-decoration: none; }
+
+/* ---------- interstellar backdrop: stars + black hole ---------- */
+.cosmic-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  overflow: hidden;
+  background: var(--bg);
+  transition: background .3s ease;
+}
+.stars-layer {
+  position: absolute;
+  inset: -12%;
+  background-repeat: repeat;
+  transition: opacity .4s ease;
+}
+.stars-far {
+  background-image:
+    radial-gradient(1px 1px at 8% 22%, #fff, transparent 60%),
+    radial-gradient(1px 1px at 33% 68%, #fff, transparent 60%),
+    radial-gradient(1.2px 1.2px at 58% 14%, #fff, transparent 60%),
+    radial-gradient(1px 1px at 74% 82%, #fff, transparent 60%),
+    radial-gradient(1px 1px at 86% 40%, #fff, transparent 60%),
+    radial-gradient(1.4px 1.4px at 20% 92%, #fff, transparent 60%),
+    radial-gradient(1px 1px at 45% 46%, #fff, transparent 60%),
+    radial-gradient(1px 1px at 64% 60%, #fff, transparent 60%),
+    radial-gradient(1.2px 1.2px at 4% 55%, #fff, transparent 60%),
+    radial-gradient(1px 1px at 92% 10%, #fff, transparent 60%);
+  background-size: 600px 600px;
+  opacity: var(--stars-opacity);
+  animation: twinkle 7s ease-in-out infinite;
+}
+.stars-near {
+  background-image:
+    radial-gradient(1.6px 1.6px at 15% 35%, #fff, transparent 60%),
+    radial-gradient(1.8px 1.8px at 40% 80%, #fff, transparent 60%),
+    radial-gradient(1.5px 1.5px at 66% 25%, #fff, transparent 60%),
+    radial-gradient(2px 2px at 80% 60%, #fff, transparent 60%),
+    radial-gradient(1.6px 1.6px at 28% 8%, #fff, transparent 60%),
+    radial-gradient(1.8px 1.8px at 90% 88%, #fff, transparent 60%);
+  background-size: 900px 900px;
+  opacity: calc(var(--stars-opacity) * .7);
+  animation: twinkle 9s ease-in-out infinite reverse;
+}
+@keyframes twinkle { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+
+.blackhole {
+  position: absolute;
+  top: -14vw; right: -10vw;
+  width: 46vw; height: 46vw;
+  min-width: 340px; min-height: 340px;
+  border-radius: 50%;
+  opacity: var(--blackhole-opacity);
+  transition: opacity .4s ease;
+  background:
+    radial-gradient(circle at 50% 50%, #000 0 27%, transparent 30%),
+    conic-gradient(from 90deg, #170e02, #f2c14e, #fff7df, #f2c14e, rgba(87, 224, 138, 0.35), #170e02);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, transparent 0 22%, #000 26%, #000 40%, transparent 44%);
+          mask-image: radial-gradient(circle at 50% 50%, transparent 0 22%, #000 26%, #000 40%, transparent 44%);
+  filter: blur(3px);
+  animation: spin 100s linear infinite;
+}
+.blackhole::before {
+  content: '';
+  position: absolute; inset: -16%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(242, 193, 78, 0.18), transparent 60%);
+  filter: blur(24px);
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 680px) {
+  .blackhole { width: 70vw; height: 70vw; top: -20vw; right: -22vw; }
+}
 
 .mono, code, .eyebrow, .nav-logo, .hero-name, .section-title, .edu-title,
 .project-title, .skill-name, .terminal-path, .prompt-chevron, .btn, .cv-btn,
@@ -110,8 +203,16 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   padding: 64px 0;
   scroll-margin-top: var(--nav-h);
+  background: var(--section-bg);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background .3s ease;
 }
-.section-alt { background: var(--bg-elevated); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
+.section-alt {
+  background: var(--section-bg-alt);
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+}
 
 .eyebrow {
   font-size: 12px;
@@ -142,8 +243,9 @@ a { color: inherit; text-decoration: none; }
 /* ============ NAV ============ */
 .nav {
   position: sticky; top: 0; z-index: 100;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-soft);
 }
 .nav-inner {
@@ -218,15 +320,65 @@ a { color: inherit; text-decoration: none; }
 .terminal-body { padding: 40px; }
 .hero-terminal .terminal-body { padding: 32px 36px; }
 
+/* ============ RETRO MONITOR (home + contact card design) ============
+   A chunky retro-computer bezel replaces the laptop/terminal look for
+   the hero and contacts cards, while projects/education keep the
+   terminal-window styling above for variety. */
+.retro-monitor {
+  position: relative;
+  background: linear-gradient(160deg, var(--bezel-1), var(--bezel-2));
+  border: 1px solid var(--bezel-edge);
+  border-radius: 26px;
+  padding: 18px 18px 32px;
+  box-shadow: 0 30px 70px -30px var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.retro-topbar {
+  display: flex; align-items: center; gap: 10px;
+  padding: 4px 12px 14px;
+}
+.retro-led {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--led);
+  box-shadow: 0 0 8px var(--led), 0 0 2px var(--led);
+  animation: ledPulse 2.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes ledPulse { 0%, 100% { opacity: 1; } 50% { opacity: .45; } }
+.retro-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--text-dim);
+}
+.retro-screen {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 30px 60px -42px rgba(0, 0, 0, 0.6);
+}
+.retro-screen::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  background: repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 0 2px, transparent 2px 4px);
+  mix-blend-mode: overlay;
+}
+.retro-vents {
+  position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%);
+  display: flex; gap: 5px;
+}
+.retro-vents span { width: 5px; height: 5px; border-radius: 1px; background: var(--bezel-edge); }
+
 /* ============ HERO ============ */
 .hero {
   min-height: calc(100vh - var(--nav-h));
   display: flex;
   align-items: center;
-  padding: 32px 0;
+  padding: 20px 0 32px;
 }
 .hero-inner { max-width: 1080px; }
 .hero-terminal { width: 100%; }
+.hero-terminal.retro-monitor { display: flex; flex-direction: column; justify-content: center; }
 .hero-body {
   display: flex;
   align-items: center;
@@ -571,6 +723,16 @@ a { color: inherit; text-decoration: none; }
 
 /* ============ RESPONSIVE ============ */
 
+/* Wide desktop: make the hero card fill almost the whole screen */
+@media (min-width: 901px) {
+  .hero-inner { max-width: 1320px; padding: 0 40px; }
+  .hero-terminal.retro-monitor { min-height: calc(100vh - var(--nav-h) - 40px); }
+  .hero-terminal .terminal-body { padding: 56px 68px; }
+  .hero-body { gap: 64px; }
+  .hero-visual { flex: 0 0 340px; }
+  .hero-avatar-frame { max-width: 340px; }
+}
+
 /* Narrow desktop / small laptop windows: shrink, but keep side-by-side layouts */
 @media (max-width: 900px) {
   .hero-visual { flex: 0 0 220px; }
@@ -620,4 +782,7 @@ a { color: inherit; text-decoration: none; }
   .section-inner, .nav-inner, .hero-inner { padding: 0 20px; }
   .cv-btn span { display: none; }
   .project-panel { padding: 22px; }
+  .retro-monitor { border-radius: 18px; padding: 12px 12px 22px; }
+  .retro-screen { border-radius: 10px; }
+  .retro-vents { bottom: 8px; }
 }

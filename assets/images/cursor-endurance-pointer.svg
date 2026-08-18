@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges">
+  <!-- pixelated ring-station "ship" cursor, Endurance-inspired, engine glowing (hover state) -->
+  <g stroke="#05080a" stroke-width="0.35">
+    <rect x="6" y="1" width="4" height="1" fill="#ffffff"/>
+    <rect x="4" y="2" width="2" height="1" fill="#ffffff"/>
+    <rect x="10" y="2" width="2" height="1" fill="#ffffff"/>
+    <rect x="3" y="3" width="1" height="1" fill="#ffffff"/>
+    <rect x="12" y="3" width="1" height="1" fill="#ffffff"/>
+    <rect x="2" y="4" width="1" height="1" fill="#ffffff"/>
+    <rect x="13" y="4" width="1" height="1" fill="#ffffff"/>
+    <rect x="1" y="6" width="1" height="4" fill="#ffffff"/>
+    <rect x="14" y="6" width="1" height="4" fill="#ffffff"/>
+    <rect x="2" y="11" width="1" height="1" fill="#ffffff"/>
+    <rect x="13" y="11" width="1" height="1" fill="#ffffff"/>
+    <rect x="3" y="12" width="1" height="1" fill="#ffffff"/>
+    <rect x="12" y="12" width="1" height="1" fill="#ffffff"/>
+    <rect x="4" y="13" width="2" height="1" fill="#ffffff"/>
+    <rect x="10" y="13" width="2" height="1" fill="#ffffff"/>
+    <rect x="6" y="14" width="4" height="1" fill="#ffffff"/>
+    <!-- docking arms, brighter -->
+    <rect x="0" y="7" width="1" height="2" fill="#7dffb0"/>
+    <rect x="15" y="7" width="1" height="2" fill="#7dffb0"/>
+    <!-- thrust trail -->
+    <rect x="7" y="9" width="2" height="1" fill="#7dffb0" opacity="0.85"/>
+    <!-- central hub / engine core, lit -->
+    <rect x="7" y="7" width="2" height="2" fill="#ffe08a"/>
+  </g>
+</svg>

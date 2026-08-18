@@ -13,6 +13,13 @@
 </head>
 <body>
 
+<!-- interstellar backdrop: distant stars + Gargantua-style black hole -->
+<div class="cosmic-bg" aria-hidden="true">
+  <div class="stars-layer stars-far"></div>
+  <div class="stars-layer stars-near"></div>
+  <div class="blackhole"></div>
+</div>
+
 <!-- scanline / crt overlay -->
 <div class="crt-overlay" aria-hidden="true"></div>
 
@@ -69,11 +76,12 @@
 <!-- ============ HOME / HERO ============ -->
 <section class="hero" id="home">
   <div class="hero-inner">
-    <div class="terminal-frame hero-terminal">
-      <div class="terminal-titlebar">
-        <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
-        <span class="terminal-path">ishtiak@mbstu:~$</span>
+    <div class="hero-terminal retro-monitor">
+      <div class="retro-topbar">
+        <span class="retro-led"></span>
+        <span class="retro-label">Endurance // Mainframe · online</span>
       </div>
+      <div class="retro-screen">
       <div class="terminal-body hero-body">
 
         <div class="hero-text">
@@ -127,6 +135,8 @@
         </div>
 
       </div>
+      </div>
+      <div class="retro-vents"><span></span><span></span><span></span><span></span><span></span></div>
     </div>
   </div>
 </section>
@@ -410,11 +420,12 @@
     <p class="eyebrow">~/contact.sh</p>
     <h2 class="section-title"><span class="section-num">05</span> Contacts</h2>
 
-    <div class="terminal-frame contact-terminal">
-      <div class="terminal-titlebar">
-        <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
-        <span class="terminal-path">~/contact.sh</span>
+    <div class="contact-terminal retro-monitor">
+      <div class="retro-topbar">
+        <span class="retro-led"></span>
+        <span class="retro-label">Comms Array · signal open</span>
       </div>
+      <div class="retro-screen">
       <div class="terminal-body contact-body">
         <p class="contact-line"><span class="prompt-chevron">$</span> echo "Let's build something."</p>
 
@@ -447,6 +458,8 @@
           </a>
         </div>
       </div>
+      </div>
+      <div class="retro-vents"><span></span><span></span><span></span><span></span><span></span></div>
     </div>
   </div>
 </section>
