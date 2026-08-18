@@ -43,14 +43,14 @@
         <span>View CV</span>
       </a>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
-        <svg class="icon-pixel icon-sun" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <svg class="icon-pixel icon-toggle icon-sun" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <rect x="5" y="0" width="2" height="2"/><rect x="5" y="10" width="2" height="2"/>
           <rect x="0" y="5" width="2" height="2"/><rect x="10" y="5" width="2" height="2"/>
           <rect x="1" y="1" width="2" height="2"/><rect x="9" y="1" width="2" height="2"/>
           <rect x="1" y="9" width="2" height="2"/><rect x="9" y="9" width="2" height="2"/>
           <rect x="4" y="4" width="4" height="4"/>
         </svg>
-        <svg class="icon-pixel icon-moon" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <svg class="icon-pixel icon-toggle icon-moon" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <rect x="4" y="1" width="2" height="1"/><rect x="3" y="2" width="2" height="1"/>
           <rect x="2" y="3" width="2" height="5"/><rect x="3" y="8" width="2" height="1"/>
           <rect x="4" y="9" width="4" height="1"/><rect x="8" y="8" width="2" height="1"/>
@@ -75,12 +75,6 @@
         <span class="terminal-path">ishtiak@mbstu:~$</span>
       </div>
       <div class="terminal-body hero-body">
-
-        <div class="avatar-wrap">
-          <!-- EDIT ME: drop your own square photo at assets/images/avatar.jpg (or change the src below) -->
-          <img class="avatar-pixel" src="assets/images/avatar.jpg" alt="Ishtiak Ahmed Ayon" loading="lazy">
-          <span class="status-pixel" aria-hidden="true"></span>
-        </div>
 
         <p class="eyebrow">~/home</p>
         <h1 class="hero-name">Ishtiak Ahmed Ayon</h1>
@@ -119,6 +113,16 @@
             GitHub Repo ↗
           </a>
         </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-avatar-frame">
+        <span class="corner corner-tl"></span><span class="corner corner-tr"></span>
+        <span class="corner corner-bl"></span><span class="corner corner-br"></span>
+        <!-- EDIT ME: drop a square photo (1080×1080 or similar) at assets/images/avatar.jpg -->
+        <img class="hero-avatar-img" src="assets/images/avatar.jpg" alt="Ishtiak Ahmed Ayon" loading="lazy">
+        <span class="status-pixel" aria-hidden="true"></span>
       </div>
     </div>
   </div>
@@ -201,7 +205,6 @@
           <p class="edu-grade">GPA <strong>5.00</strong><span class="edu-grade-scale">/5.00</span></p>
         </div>
       </div>
-
       <div class="edu-card edu-card-clickable" id="bscCard" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="eduModal">
         <span class="edu-node edu-node-active"></span>
         <div class="edu-card-body">
@@ -245,7 +248,7 @@
     <h2 class="section-title"><span class="section-num">03</span> Skills</h2>
 
     <div class="skills-grid">
-      <div class="skill-card">
+      <div class="skill-card" tabindex="0">
         <svg class="icon-pixel icon-pixel-xl" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <rect x="1" y="4" width="14" height="1"/><rect x="1" y="11" width="14" height="1"/>
           <rect x="1" y="4" width="1" height="8"/><rect x="14" y="4" width="1" height="8"/>
@@ -254,8 +257,9 @@
           <rect x="6" y="6" width="1" height="1"/><rect x="6" y="9" width="1" height="1"/>
         </svg>
         <span class="skill-name">C++</span>
+        <p class="skill-detail">Systems-level thinking, data structures, and coursework projects.</p>
       </div>
-      <div class="skill-card">
+      <div class="skill-card" tabindex="0">
         <svg class="icon-pixel icon-pixel-xl" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <rect x="5" y="1" width="1" height="2"/><rect x="8" y="1" width="1" height="2"/>
           <rect x="4" y="3" width="8" height="1"/>
@@ -266,8 +270,9 @@
           <rect x="3" y="12" width="10" height="2"/>
         </svg>
         <span class="skill-name">Java</span>
+        <p class="skill-detail">OOP, Swing, and the language behind most of my university projects.</p>
       </div>
-      <div class="skill-card">
+      <div class="skill-card" tabindex="0">
         <svg class="icon-pixel icon-pixel-xl" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <rect x="3" y="2" width="6" height="5"/><rect x="7" y="9" width="6" height="5"/>
           <rect x="2" y="3" width="1" height="3"/><rect x="10" y="10" width="1" height="3"/>
@@ -275,8 +280,9 @@
           <rect x="4" y="3" width="1" height="1" class="skill-eye"/><rect x="9" y="10" width="1" height="1" class="skill-eye"/>
         </svg>
         <span class="skill-name">Python</span>
+        <p class="skill-detail">Scripting, quick prototypes, and automating the boring stuff.</p>
       </div>
-      <div class="skill-card">
+      <div class="skill-card" tabindex="0">
         <svg class="icon-pixel icon-pixel-xl" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <rect x="7" y="2" width="2" height="2"/>
           <rect x="7" y="4" width="1" height="9"/>
@@ -286,8 +292,9 @@
           <rect x="12" y="9" width="2" height="2"/>
         </svg>
         <span class="skill-name">Git</span>
+        <p class="skill-detail">Version control for every project — branches, PRs, the works.</p>
       </div>
-      <div class="skill-card">
+      <div class="skill-card" tabindex="0">
         <svg class="icon-pixel icon-pixel-xl" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <rect x="2" y="2" width="12" height="12" opacity="0.15"/>
           <rect x="2" y="2" width="12" height="1"/><rect x="2" y="13" width="12" height="1"/>
@@ -295,6 +302,7 @@
           <rect x="4" y="10" width="2" height="2"/><rect x="7" y="6" width="2" height="6"/><rect x="10" y="4" width="2" height="8"/>
         </svg>
         <span class="skill-name">Adobe Illustrator</span>
+        <p class="skill-detail">Vector work for posters, icons, and the odd UI mockup.</p>
       </div>
     </div>
   </div>
@@ -306,80 +314,92 @@
     <p class="eyebrow">~/projects</p>
     <h2 class="section-title"><span class="section-num">04</span> Projects</h2>
 
-    <div class="projects-grid">
+    <div class="projects-panel terminal-frame">
+      <div class="terminal-titlebar">
+        <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+        <span class="terminal-path">~/projects/</span>
+      </div>
 
-      <!-- Project 1 -->
-      <article class="project-card">
-        <div class="project-media">
-          <!-- EDIT ME: drop a screenshot at assets/images/projects/java-quiz.jpg -->
-          <img class="project-icon" src="assets/images/projects/java-quiz.jpg" alt="Java Quiz App screenshot" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Java Quiz App</h3>
-          <!-- EDIT ME: description -->
-          <p class="project-desc">A short line about what this project does and who it's for — edit me.</p>
-          <div class="project-tech">
-            <!-- EDIT ME: tech stack -->
-            <span class="tech-pill">Java</span><span class="tech-pill">Swing</span>
-          </div>
-          <!-- EDIT ME: repo link -->
-          <a href="#" class="project-link" target="_blank" rel="noopener">View Repo ↗</a>
-        </div>
-      </article>
+      <div class="projects-layout">
+        <!-- side menu -->
+        <nav class="projects-menu" id="projectsMenu" aria-label="Project list">
+          <span class="menu-snake" id="menuSnake" aria-hidden="true">
+            <span class="snake-seg"></span><span class="snake-seg"></span><span class="snake-seg"></span><span class="snake-seg"></span>
+          </span>
+          <button class="project-menu-item is-active" data-project="0" aria-current="true">
+            <span class="menu-index">01</span><span class="menu-label">Java Quiz App</span>
+          </button>
+          <button class="project-menu-item" data-project="1">
+            <span class="menu-index">02</span><span class="menu-label">RFID Attendance System</span>
+          </button>
+          <button class="project-menu-item" data-project="2">
+            <span class="menu-index">03</span><span class="menu-label">VocabFlash App</span>
+          </button>
+          <!-- EDIT ME: your GitHub profile URL -->
+          <a class="project-menu-item project-menu-more" href="https://github.com/yourusername" target="_blank" rel="noopener">
+            <span class="menu-index">04</span><span class="menu-label">More on GitHub ↗</span>
+          </a>
+        </nav>
 
-      <!-- Project 2 -->
-      <article class="project-card">
-        <div class="project-media">
-          <!-- EDIT ME: drop a screenshot at assets/images/projects/rfid-attendance.jpg -->
-          <img class="project-icon" src="assets/images/projects/rfid-attendance.jpg" alt="RFID-based Attendance System screenshot" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">RFID-based Attendance System</h3>
-          <!-- EDIT ME: description -->
-          <p class="project-desc">A short line about what this project does and who it's for — edit me.</p>
-          <div class="project-tech">
-            <!-- EDIT ME: tech stack -->
-            <span class="tech-pill">C++</span><span class="tech-pill">Arduino</span><span class="tech-pill">RFID</span>
-          </div>
-          <!-- EDIT ME: repo link -->
-          <a href="#" class="project-link" target="_blank" rel="noopener">View Repo ↗</a>
-        </div>
-      </article>
+        <!-- single project display -->
+        <div class="project-display" id="projectDisplay">
 
-      <!-- Project 3 -->
-      <article class="project-card">
-        <div class="project-media">
-          <!-- EDIT ME: drop a screenshot at assets/images/projects/vocabflash.jpg -->
-          <img class="project-icon" src="assets/images/projects/vocabflash.jpg" alt="VocabFlash App screenshot" loading="lazy">
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">VocabFlash App</h3>
-          <!-- EDIT ME: description -->
-          <p class="project-desc">A short line about what this project does and who it's for — edit me.</p>
-          <div class="project-tech">
-            <!-- EDIT ME: tech stack -->
-            <span class="tech-pill">Kotlin</span><span class="tech-pill">SQLite</span>
-          </div>
-          <!-- EDIT ME: repo link -->
-          <a href="#" class="project-link" target="_blank" rel="noopener">View Repo ↗</a>
-        </div>
-      </article>
+          <article class="project-panel is-active" data-panel="0">
+            <div class="project-media">
+              <!-- EDIT ME: drop a screenshot at assets/images/projects/java-quiz.jpg -->
+              <img class="project-icon" src="assets/images/projects/java-quiz.jpg" alt="Java Quiz App screenshot" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Java Quiz App</h3>
+              <!-- EDIT ME: description -->
+              <p class="project-desc">A short line about what this project does and who it's for — edit me.</p>
+              <div class="project-tech">
+                <!-- EDIT ME: tech stack -->
+                <span class="tech-pill">Java</span><span class="tech-pill">Swing</span>
+              </div>
+              <!-- EDIT ME: repo link -->
+              <a href="#" class="project-link" target="_blank" rel="noopener">View Repo ↗</a>
+            </div>
+          </article>
 
-      <!-- Project 4: more on GitHub -->
-      <article class="project-card project-card-more">
-        <svg class="icon-pixel icon-pixel-xl" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <rect x="4" y="1" width="4" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="8" y="2" width="1" height="1"/>
-          <rect x="2" y="3" width="8" height="4"/><rect x="1" y="4" width="1" height="2"/><rect x="10" y="4" width="1" height="2"/>
-          <rect x="3" y="7" width="2" height="1"/><rect x="7" y="7" width="2" height="1"/>
-          <rect x="2" y="8" width="1" height="2"/><rect x="9" y="8" width="1" height="2"/>
-          <rect x="3" y="9" width="1" height="1"/><rect x="8" y="9" width="1" height="1"/>
-        </svg>
-        <h3 class="project-title">More on GitHub</h3>
-        <p class="project-desc">Every experiment, half-finished idea and coursework repo lives here.</p>
-        <!-- EDIT ME: your GitHub profile URL -->
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="project-link">View all repos ↗</a>
-      </article>
+          <article class="project-panel" data-panel="1">
+            <div class="project-media">
+              <!-- EDIT ME: drop a screenshot at assets/images/projects/rfid-attendance.jpg -->
+              <img class="project-icon" src="assets/images/projects/rfid-attendance.jpg" alt="RFID-based Attendance System screenshot" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">RFID-based Attendance System</h3>
+              <!-- EDIT ME: description -->
+              <p class="project-desc">A short line about what this project does and who it's for — edit me.</p>
+              <div class="project-tech">
+                <!-- EDIT ME: tech stack -->
+                <span class="tech-pill">C++</span><span class="tech-pill">Arduino</span><span class="tech-pill">RFID</span>
+              </div>
+              <!-- EDIT ME: repo link -->
+              <a href="#" class="project-link" target="_blank" rel="noopener">View Repo ↗</a>
+            </div>
+          </article>
 
+          <article class="project-panel" data-panel="2">
+            <div class="project-media">
+              <!-- EDIT ME: drop a screenshot at assets/images/projects/vocabflash.jpg -->
+              <img class="project-icon" src="assets/images/projects/vocabflash.jpg" alt="VocabFlash App screenshot" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">VocabFlash App</h3>
+              <!-- EDIT ME: description -->
+              <p class="project-desc">A short line about what this project does and who it's for — edit me.</p>
+              <div class="project-tech">
+                <!-- EDIT ME: tech stack -->
+                <span class="tech-pill">Kotlin</span><span class="tech-pill">SQLite</span>
+              </div>
+              <!-- EDIT ME: repo link -->
+              <a href="#" class="project-link" target="_blank" rel="noopener">View Repo ↗</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -23,7 +23,7 @@ portfolio/
 
 Replace `assets/images/avatar.jpg` with your own photo.
 
-- **Recommended size:** roughly square, at least 500×500px.
+- **Recommended size:** roughly square, ~1080×1080px (matches the placeholder).
 - **Format:** `.jpg` or `.png` both work — if you use `.png`, either rename it
   to `avatar.jpg` or update the two `src="assets/images/avatar.jpg"`
   references in `index.html` (Home hero and Overview section) to match.
