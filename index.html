@@ -76,53 +76,56 @@
       </div>
       <div class="terminal-body hero-body">
 
-        <p class="eyebrow">~/home</p>
-        <h1 class="hero-name">Ishtiak Ahmed Ayon</h1>
-        <p class="hero-role">B.Sc. student, Information &amp; Communication Technology — MBSTU</p>
-        <p class="hero-typed">
-          <span class="prompt-chevron">&gt;</span>
-          <span id="typedText"></span><span class="cursor-blink">_</span>
-        </p>
+        <div class="hero-text">
+          <p class="eyebrow">~/home</p>
+          <h1 class="hero-name">Ishtiak Ahmed Ayon</h1>
+          <p class="hero-role">B.Sc. student, Information &amp; Communication Technology — MBSTU</p>
+          <p class="hero-typed">
+            <span class="prompt-chevron">&gt;</span>
+            <span id="typedText"></span><span class="cursor-blink">_</span>
+          </p>
 
-        <p class="hero-bio">I build small, useful things — quiz apps, IoT gadgets, study tools —
-          and push every one of them to GitHub. Currently deep in Java, Python, and whatever
-          this semester throws at me next.</p>
+          <p class="hero-bio">I build small, useful things — quiz apps, IoT gadgets, study tools —
+            and push every one of them to GitHub. Currently deep in Java, Python, and whatever
+            this semester throws at me next.</p>
 
-        <div class="skill-chip-row" aria-label="Core skills">
-          <span class="skill-chip">C++</span>
-          <span class="skill-chip">Java</span>
-          <span class="skill-chip">Python</span>
-          <span class="skill-chip">Git</span>
-          <span class="skill-chip">Illustrator</span>
+          <div class="skill-chip-row" aria-label="Core skills">
+            <span class="skill-chip">C++</span>
+            <span class="skill-chip">Java</span>
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">Git</span>
+            <span class="skill-chip">Illustrator</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              View Projects
+              <svg class="icon-pixel" viewBox="0 0 10 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="1" width="2" height="6"/><rect x="1" y="5" width="2" height="2"/><rect x="7" y="5" width="2" height="2"/><rect x="3" y="7" width="4" height="2"/></svg>
+            </a>
+            <!-- EDIT ME: your GitHub profile URL -->
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="btn btn-ghost">
+              <svg class="icon-pixel" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="1" width="4" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="8" y="2" width="1" height="1"/>
+                <rect x="2" y="3" width="8" height="4"/><rect x="1" y="4" width="1" height="2"/><rect x="10" y="4" width="1" height="2"/>
+                <rect x="3" y="7" width="2" height="1"/><rect x="7" y="7" width="2" height="1"/>
+                <rect x="2" y="8" width="1" height="2"/><rect x="9" y="8" width="1" height="2"/>
+                <rect x="3" y="9" width="1" height="1"/><rect x="8" y="9" width="1" height="1"/>
+              </svg>
+              GitHub Repo ↗
+            </a>
+          </div>
         </div>
 
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">
-            View Projects
-            <svg class="icon-pixel" viewBox="0 0 10 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="1" width="2" height="6"/><rect x="1" y="5" width="2" height="2"/><rect x="7" y="5" width="2" height="2"/><rect x="3" y="7" width="4" height="2"/></svg>
-          </a>
-          <!-- EDIT ME: your GitHub profile URL -->
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="btn btn-ghost">
-            <svg class="icon-pixel" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="1" width="4" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="8" y="2" width="1" height="1"/>
-              <rect x="2" y="3" width="8" height="4"/><rect x="1" y="4" width="1" height="2"/><rect x="10" y="4" width="1" height="2"/>
-              <rect x="3" y="7" width="2" height="1"/><rect x="7" y="7" width="2" height="1"/>
-              <rect x="2" y="8" width="1" height="2"/><rect x="9" y="8" width="1" height="2"/>
-              <rect x="3" y="9" width="1" height="1"/><rect x="8" y="9" width="1" height="1"/>
-            </svg>
-            GitHub Repo ↗
-          </a>
+        <div class="hero-visual">
+          <div class="hero-avatar-frame">
+            <span class="corner corner-tl"></span><span class="corner corner-tr"></span>
+            <span class="corner corner-bl"></span><span class="corner corner-br"></span>
+            <!-- EDIT ME: drop a square photo (1080×1080 or similar) at assets/images/avatar.jpg -->
+            <img class="hero-avatar-img" src="assets/images/avatar.jpg" alt="Ishtiak Ahmed Ayon" loading="lazy">
+            <span class="status-pixel" aria-hidden="true"></span>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="hero-visual">
-      <div class="hero-avatar-frame">
-        <span class="corner corner-tl"></span><span class="corner corner-tr"></span>
-        <span class="corner corner-bl"></span><span class="corner corner-br"></span>
-        <!-- EDIT ME: drop a square photo (1080×1080 or similar) at assets/images/avatar.jpg -->
-        <img class="hero-avatar-img" src="assets/images/avatar.jpg" alt="Ishtiak Ahmed Ayon" loading="lazy">
-        <span class="status-pixel" aria-hidden="true"></span>
       </div>
     </div>
   </div>
@@ -323,9 +326,6 @@
       <div class="projects-layout">
         <!-- side menu -->
         <nav class="projects-menu" id="projectsMenu" aria-label="Project list">
-          <span class="menu-snake" id="menuSnake" aria-hidden="true">
-            <span class="snake-seg"></span><span class="snake-seg"></span><span class="snake-seg"></span><span class="snake-seg"></span>
-          </span>
           <button class="project-menu-item is-active" data-project="0" aria-current="true">
             <span class="menu-index">01</span><span class="menu-label">Java Quiz App</span>
           </button>

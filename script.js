@@ -143,29 +143,15 @@ const curriculum = [
   });
 })();
 
-/* ---------------- Projects: side-menu tab switching + snake ---------------- */
+/* ---------------- Projects: side-menu tab switching ---------------- */
 (function projectsInit() {
   const menu = document.getElementById('projectsMenu');
-  const snake = document.getElementById('menuSnake');
-  if (!menu || !snake) return;
+  if (!menu) return;
 
   const items = Array.from(menu.querySelectorAll('.project-menu-item[data-project]'));
   const panels = Array.from(document.querySelectorAll('.project-panel'));
 
-  function positionSnake(item, animate) {
-    const menuRect = menu.getBoundingClientRect();
-    const itemRect = item.getBoundingClientRect();
-    const offset = (itemRect.top - menuRect.top) + (itemRect.height / 2) - (snake.offsetHeight / 2);
-    if (!animate) snake.style.transitionDuration = '0s';
-    snake.style.transform = `translateY(${offset}px)`;
-    if (!animate) {
-      // force reflow then restore transition
-      void snake.offsetHeight;
-      snake.style.transitionDuration = '';
-    }
-  }
-
-  function activate(targetItem, { fromClick } = {}) {
+  function activate(targetItem) {
     const index = targetItem.getAttribute('data-project');
     items.forEach(i => {
       const active = i === targetItem;
@@ -173,26 +159,10 @@ const curriculum = [
       i.setAttribute('aria-current', active ? 'true' : 'false');
     });
     panels.forEach(p => p.classList.toggle('is-active', p.dataset.panel === index));
-
-    positionSnake(targetItem, true);
-    if (fromClick) {
-      snake.classList.add('is-slithering');
-      setTimeout(() => snake.classList.remove('is-slithering'), 420);
-    }
   }
 
   items.forEach(item => {
-    item.addEventListener('click', () => activate(item, { fromClick: true }));
-  });
-
-  // place the snake at the initially active item once layout is ready
-  window.addEventListener('load', () => {
-    const current = menu.querySelector('.project-menu-item.is-active') || items[0];
-    positionSnake(current, false);
-  });
-  window.addEventListener('resize', () => {
-    const current = menu.querySelector('.project-menu-item.is-active') || items[0];
-    positionSnake(current, false);
+    item.addEventListener('click', () => activate(item));
   });
 })();
 
