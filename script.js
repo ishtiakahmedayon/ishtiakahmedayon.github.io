@@ -117,9 +117,19 @@ const curriculum = [
 
 /* ---------------- Education modal ---------------- */
 (function modalInit() {
+  const curriculumEnabled = false;
   const card = document.getElementById('bscCard');
   const backdrop = document.getElementById('eduModalBackdrop');
   const closeBtn = document.getElementById('modalClose');
+
+  if (!curriculumEnabled) {
+    card.classList.remove('edu-card-clickable');
+    card.removeAttribute('tabindex');
+    card.removeAttribute('role');
+    card.removeAttribute('aria-haspopup');
+    card.removeAttribute('aria-controls');
+    return;
+  }
 
   function open() {
     backdrop.classList.add('is-open');

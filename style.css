@@ -16,9 +16,9 @@
   --text-primary: #f1f8f2;
   --text-secondary: #b9c9bd;
   --text-dim: #6c8579;
-  --accent: #f2c14e;
-  --accent-dim: #a3822f;
-  --accent-soft: rgba(242, 193, 78, 0.14);
+  --accent: #00FF42;
+  --accent-dim: #00b832;
+  --accent-soft: rgba(0, 255, 66, 0.14);
   --accent-2: #57e08a;
   --accent-2-soft: rgba(87, 224, 138, 0.14);
   --maroon: #d9615a;
@@ -26,7 +26,7 @@
   --shadow: rgba(0, 0, 0, 0.6);
   --scanline-opacity: 0.035;
   --code-red: #ef6b62;
-  --code-yellow: #ecc25c;
+  --code-yellow: #00FF42;
   --code-green: #57e08a;
 
   --section-bg: rgba(4, 7, 6, 0.62);
@@ -49,9 +49,9 @@
   --text-primary: #151f17;
   --text-secondary: #48573f;
   --text-dim: #7c8a71;
-  --accent: #a5670c;
-  --accent-dim: #cfa25a;
-  --accent-soft: rgba(165, 103, 12, 0.12);
+  --accent: #A81111;
+  --accent-dim: #00b832;
+  --accent-soft: rgba(0, 255, 66, 0.12);
   --accent-2: #217a45;
   --accent-2-soft: rgba(33, 122, 69, 0.12);
   --maroon: #8a332d;
@@ -59,7 +59,7 @@
   --shadow: rgba(40, 50, 30, 0.18);
   --scanline-opacity: 0.02;
   --code-red: #c9463f;
-  --code-yellow: #a5670c;
+  --code-yellow: #00FF42;
   --code-green: #217a45;
 
   --section-bg: rgba(238, 241, 230, 0.88);
@@ -151,7 +151,7 @@ a { color: inherit; text-decoration: none; }
   transition: opacity .4s ease;
   background:
     radial-gradient(circle at 50% 50%, #000 0 27%, transparent 30%),
-    conic-gradient(from 90deg, #170e02, #f2c14e, #fff7df, #f2c14e, rgba(87, 224, 138, 0.35), #170e02);
+    conic-gradient(from 90deg, #031707, #00FF42, #effff2, #00FF42, rgba(87, 224, 138, 0.35), #031707);
   -webkit-mask-image: radial-gradient(circle at 50% 50%, transparent 0 22%, #000 26%, #000 40%, transparent 44%);
           mask-image: radial-gradient(circle at 50% 50%, transparent 0 22%, #000 26%, #000 40%, transparent 44%);
   filter: blur(3px);
@@ -161,7 +161,7 @@ a { color: inherit; text-decoration: none; }
   content: '';
   position: absolute; inset: -16%;
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 50%, rgba(242, 193, 78, 0.18), transparent 60%);
+  background: radial-gradient(circle at 50% 50%, rgba(0, 255, 66, 0.18), transparent 60%);
   filter: blur(24px);
 }
 @keyframes spin { to { transform: rotate(360deg); } }
